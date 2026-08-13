@@ -21,6 +21,9 @@ npm run lint     # eslint (flat config, eslint-config-next)
 
 No hay test runner configurado todavía.
 
+## Skills
+Usa siempre /frontend-design pra diseñar la interfaz de usuario.
+
 ## Arquitectura
 
 - Next.js App Router, TypeScript, React 19. Las rutas/páginas viven bajo `app/`.
