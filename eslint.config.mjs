@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Prototipo de referencia (JSX suelto con globals de React UMD, no es parte de la app):
+    "references/**",
   ]),
 ]);
 

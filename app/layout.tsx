@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono, Press_Start_2P } from "next/font/google";
+import Nav from "@/components/Nav";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const pressStart2P = Press_Start_2P({
+  variable: "--font-pixel",
+  weight: "400",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-mono-game",
   subsets: ["latin"],
 });
 
@@ -20,10 +22,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="es"
+      className={`${pressStart2P.variable} ${jetBrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full">
+        <div className="av-bg" />
+        <div className="av-noise" />
+        <div className="relative z-10 flex min-h-full flex-col">
+          <Nav />
+          <main className="flex-1">{children}</main>
+          <footer className="mono border-t border-[var(--line)] px-8 py-5 text-center text-[11px] tracking-[0.16em] text-[var(--ink-faint)]">
+            © 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0
+          </footer>
+        </div>
+      </body>
     </html>
   );
 }
