@@ -1,6 +1,6 @@
 # SPEC 01 — Pantallas visuales del MVP (Biblioteca, Detalle, Reproductor, Salón de la Fama, Auth)
 
-> **Status:** Aprobado
+> **Status:** Implementado
 > **Depends on:** —
 > **Date:** 2026-08-13
 > **Objective:** Migrar las 5 pantallas de `references/templates/` (prototipo HTML/React suelto) a rutas reales de Next.js App Router con Tailwind v4, solo la parte visual, sin lógica de juego ni backend real.

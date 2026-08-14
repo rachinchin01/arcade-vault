@@ -1,6 +1,6 @@
 # SPEC 02 — Pantalla de inicio (Home)
 
-> **Status:** Aprobado
+> **Status:** Implementado
 > **Depends on:** SPEC 01
 > **Date:** 2026-08-14
 > **Objective:** Migrar la pantalla Home de `references/templates/home-about/home.jsx` a la ruta raíz `/` de Next.js, moviendo la Biblioteca actual a `/games` y actualizando el Nav y todos los enlaces internos en consecuencia.

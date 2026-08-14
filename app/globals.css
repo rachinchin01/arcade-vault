@@ -547,4 +547,49 @@ a {
   opacity: 1;
   transform: none;
 }
+
+/* ===== about: divisor de pixels parpadeantes ===== */
+.about-divider .div-pixels span {
+  width: 6px;
+  height: 6px;
+  background: var(--cyan);
+  box-shadow: 0 0 6px var(--cyan);
+  animation: pxblink 2.4s steps(2) infinite;
+}
+.about-divider .div-pixels span:nth-child(3n) {
+  background: var(--magenta);
+  box-shadow: 0 0 6px var(--magenta);
+}
+.about-divider .div-pixels span:nth-child(5n) {
+  background: var(--yellow);
+  box-shadow: 0 0 6px var(--yellow);
+}
+@keyframes pxblink {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* ===== about: formulario de contacto — shake en validación ===== */
+.shake {
+  animation: shake 0.4s;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
 }
