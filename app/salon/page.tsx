@@ -118,7 +118,7 @@ export default function SalonPage() {
       </div>
 
       <div className="mt-8 text-center">
-        <Button href="/" size="lg">
+        <Button href="/games" size="lg">
           VOLVER A LA BIBLIOTECA
         </Button>
       </div>

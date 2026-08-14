@@ -64,7 +64,8 @@ export default function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const isLibraryActive = pathname === "/" || pathname.startsWith("/juego");
+  const isHomeActive = pathname === "/";
+  const isLibraryActive = pathname === "/games" || pathname.startsWith("/juego");
   const isSalonActive = pathname === "/salon";
   const isAuthActive = pathname === "/auth";
 
@@ -81,7 +82,10 @@ export default function Nav() {
         </Link>
 
         <div className="ml-2 flex items-center gap-1 max-[840px]:hidden">
-          <NavLink href="/" active={isLibraryActive}>
+          <NavLink href="/" active={isHomeActive}>
+            Inicio
+          </NavLink>
+          <NavLink href="/games" active={isLibraryActive}>
             Biblioteca
           </NavLink>
           <NavLink href="/salon" active={isSalonActive}>
@@ -128,7 +132,10 @@ export default function Nav() {
         }`}
       >
         <div className="pixel neon-cyan mb-4 text-[11px]">MENÚ</div>
-        <MobileLink href="/" active={isLibraryActive} onClick={close}>
+        <MobileLink href="/" active={isHomeActive} onClick={close}>
+          Inicio
+        </MobileLink>
+        <MobileLink href="/games" active={isLibraryActive} onClick={close}>
           Biblioteca
         </MobileLink>
         <MobileLink href="/salon" active={isSalonActive} onClick={close}>

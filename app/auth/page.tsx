@@ -97,7 +97,7 @@ export default function AuthPage() {
           </Button>
         </form>
 
-        <Button href="/" variant="ghost" className="mt-2.5 w-full">
+        <Button href="/games" variant="ghost" className="mt-2.5 w-full">
           JUGAR COMO INVITADO
         </Button>
 
