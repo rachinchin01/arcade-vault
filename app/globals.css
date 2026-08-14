@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+@layer base {
 :root {
   --bg: #0a0a0f;
   --bg-2: #0f0f18;
@@ -497,4 +498,5 @@ a {
     opacity: 1;
     transform: none;
   }
+}
 }
