@@ -294,7 +294,7 @@ export default function Home() {
       {/* POR QUÉ */}
       <section className="reveal mx-auto max-w-[1320px] px-8 py-20 max-[720px]:px-4">
         <div className="mb-9 flex items-center gap-4.5">
-          <div className="pixel neon-magenta text-[11px] tracking-[0.22em]">// 01</div>
+          <div className="pixel neon-magenta text-[11px] tracking-[0.22em]">{"// 01"}</div>
           <h2 className="pixel m-0 text-[clamp(18px,2.8vw,28px)] tracking-[0.06em] text-[var(--ink)]">
             ¿POR QUÉ ARCADE VAULT?
           </h2>
@@ -320,7 +320,7 @@ export default function Home() {
       {/* JUEGOS DISPONIBLES */}
       <section className="reveal mx-auto max-w-[1320px] px-8 py-20 max-[720px]:px-4">
         <div className="mb-9 flex items-center gap-4.5">
-          <div className="pixel neon-cyan text-[11px] tracking-[0.22em]">// 02</div>
+          <div className="pixel neon-cyan text-[11px] tracking-[0.22em]">{"// 02"}</div>
           <h2 className="pixel m-0 text-[clamp(18px,2.8vw,28px)] tracking-[0.06em] text-[var(--ink)]">
             JUEGOS DISPONIBLES AHORA
           </h2>
@@ -368,7 +368,7 @@ export default function Home() {
       {/* ACTIVIDAD */}
       <section className="reveal mx-auto max-w-[1320px] px-8 py-20 max-[720px]:px-4">
         <div className="mb-9 flex items-center gap-4.5">
-          <div className="pixel neon-yellow text-[11px] tracking-[0.22em]">// 03</div>
+          <div className="pixel neon-yellow text-[11px] tracking-[0.22em]">{"// 03"}</div>
           <h2 className="pixel m-0 text-[clamp(18px,2.8vw,28px)] tracking-[0.06em] text-[var(--ink)]">
             ACTIVIDAD EN VIVO
           </h2>
@@ -461,7 +461,7 @@ export default function Home() {
       {/* PRECIOS */}
       <section className="reveal mx-auto max-w-[1320px] px-8 py-20 max-[720px]:px-4">
         <div className="mb-9 flex items-center gap-4.5">
-          <div className="pixel neon-green text-[11px] tracking-[0.22em]">// 04</div>
+          <div className="pixel neon-green text-[11px] tracking-[0.22em]">{"// 04"}</div>
           <h2 className="pixel m-0 text-[clamp(18px,2.8vw,28px)] tracking-[0.06em] text-[var(--ink)]">
             PRECIOS
           </h2>
