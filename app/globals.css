@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+@layer base {
 :root {
   --bg: #0a0a0f;
   --bg-2: #0f0f18;
@@ -497,4 +498,53 @@ a {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ===== home: silhouettes pixel-art flotantes del hero ===== */
+.home-silos {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.55;
+}
+.home-silos .silo {
+  position: absolute;
+  filter: drop-shadow(0 0 10px currentColor);
+  animation: float 6s ease-in-out infinite;
+  image-rendering: pixelated;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(2deg);
+  }
+}
+
+/* ===== home: indicador de scroll del hero ===== */
+.hero-scroll .arrow {
+  color: var(--cyan);
+  animation: bounce 1.6s ease-in-out infinite;
+}
+@keyframes bounce {
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+/* ===== home: aparición de secciones al hacer scroll ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 600ms ease,
+    transform 600ms ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
 }

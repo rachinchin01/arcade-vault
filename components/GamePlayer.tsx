@@ -133,7 +133,7 @@ export default function GamePlayer({ game }: { game: Game }) {
 
             <div className="mt-4.5 flex flex-wrap justify-center gap-2.5">
               <Button onClick={closeModal}>JUGAR DE NUEVO</Button>
-              <Button href="/" variant="magenta">
+              <Button href="/games" variant="magenta">
                 VOLVER AL VAULT
               </Button>
             </div>

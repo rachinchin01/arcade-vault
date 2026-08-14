@@ -22,7 +22,7 @@ function NavLink({
     <Link
       href={href}
       onClick={onClick}
-      className={`pixel relative px-3.5 py-2.5 text-[9px] tracking-[0.16em] transition-colors ${
+      className={`pixel normal-case relative px-3.5 py-2.5 text-[9px] tracking-[0.16em] transition-colors ${
         active
           ? "text-[var(--cyan)] [text-shadow:0_0_8px_rgba(0,245,255,0.65)]"
           : "text-[var(--ink-dim)] hover:text-[var(--ink)]"
@@ -51,7 +51,7 @@ function MobileLink({
     <Link
       href={href}
       onClick={onClick}
-      className={`pixel border-b border-dashed border-[var(--line-2)] px-3 py-3.5 text-[11px] ${
+      className={`pixel normal-case border-b border-dashed border-[var(--line-2)] px-3 py-3.5 text-[11px] ${
         active ? "text-[var(--cyan)]" : "text-[var(--ink-dim)]"
       }`}
     >
@@ -64,7 +64,8 @@ export default function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const isLibraryActive = pathname === "/" || pathname.startsWith("/juego");
+  const isHomeActive = pathname === "/";
+  const isLibraryActive = pathname === "/games" || pathname.startsWith("/juego");
   const isSalonActive = pathname === "/salon";
   const isAuthActive = pathname === "/auth";
 
@@ -81,7 +82,10 @@ export default function Nav() {
         </Link>
 
         <div className="ml-2 flex items-center gap-1 max-[840px]:hidden">
-          <NavLink href="/" active={isLibraryActive}>
+          <NavLink href="/" active={isHomeActive}>
+            Inicio
+          </NavLink>
+          <NavLink href="/games" active={isLibraryActive}>
             Biblioteca
           </NavLink>
           <NavLink href="/salon" active={isSalonActive}>
@@ -98,7 +102,7 @@ export default function Nav() {
 
         <Link
           href="/auth"
-          className={`pixel relative ml-4 inline-flex items-center justify-center gap-2.5 border border-[var(--cyan)] px-5 py-3 text-[10px] tracking-[0.16em] text-[var(--ink)] transition-[color,box-shadow] duration-150 hover:text-[var(--cyan)] hover:shadow-[0_0_14px_rgba(0,245,255,0.55),inset_0_0_8px_rgba(0,245,255,0.35)] ${CLIP_BTN}`}
+          className={`pixel normal-case relative ml-4 inline-flex items-center justify-center gap-2.5 border border-[var(--cyan)] px-5 py-3 text-[10px] tracking-[0.16em] text-[var(--ink)] transition-[color,box-shadow] duration-150 hover:text-[var(--cyan)] hover:shadow-[0_0_14px_rgba(0,245,255,0.55),inset_0_0_8px_rgba(0,245,255,0.35)] ${CLIP_BTN}`}
         >
           <span
             className={`pointer-events-none absolute inset-[3px] border border-[rgba(0,245,255,0.25)] ${CLIP_BTN}`}
@@ -128,7 +132,10 @@ export default function Nav() {
         }`}
       >
         <div className="pixel neon-cyan mb-4 text-[11px]">MENÚ</div>
-        <MobileLink href="/" active={isLibraryActive} onClick={close}>
+        <MobileLink href="/" active={isHomeActive} onClick={close}>
+          Inicio
+        </MobileLink>
+        <MobileLink href="/games" active={isLibraryActive} onClick={close}>
           Biblioteca
         </MobileLink>
         <MobileLink href="/salon" active={isSalonActive} onClick={close}>
